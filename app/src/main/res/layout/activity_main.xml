@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="7dp"
+            android:text="Player 1: X"
+            android:textAlignment="center"
+            android:textSize="21dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:text="Player 2: O"
+            android:textAlignment="center"
+            android:textSize="21dp" />
+
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="3">
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/btnBack"
+                android:onClick="click"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/btnBack"
+                android:onClick="click"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/btnBack"
+                android:onClick="click"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/btn4"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/btnBack"
+                android:onClick="click"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/btnBack"
+                android:onClick="click"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/btnBack"
+                android:onClick="click"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/btn7"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/btnBack"
+                android:onClick="click"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/btn8"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/btnBack"
+                android:onClick="click"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_margin="4dp"
+                android:backgroundTint="@color/btnBack"
+                android:onClick="click"
+                android:textColor="@color/black"
+                android:textSize="30dp" />
+
+        </GridLayout>
+
+        <Button
+            android:id="@+id/btnRestart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:backgroundTint="@color/btnBack"
+            android:text="Restart"
+            android:textColor="@color/black"
+            android:textSize="24dp" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/successAlertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#A6FFFFFF">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@drawable/success_background"
+            app:layout_constraintBottom_toBottomOf="@+id/successAlertDialog"
+            app:layout_constraintEnd_toEndOf="@+id/successAlertDialog"
+            app:layout_constraintStart_toStartOf="@+id/successAlertDialog"
+            app:layout_constraintTop_toTopOf="@+id/successAlertDialog">
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_success"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:text="Success"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="18sp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/drawn"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAction"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:background="@drawable/btn_success"
+            android:textColor="@color/black"
+            android:text="Play Again"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/layoutDialog"
+            app:layout_constraintTop_toBottomOf="@id/layoutDialog"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
