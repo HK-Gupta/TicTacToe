@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                 while (i <= 9) {
                     if (buttonStr[i] == buttonStr[i + 1] && buttonStr[i] == buttonStr[i + 2] && buttonStr[i] != "") {
                         binding.successAlertDialog.visibility = View.VISIBLE
-                        binding.textMessage.text = if (flag == 1) getString(R.string.success1) else getString(R.string.success2)
+                        binding.textMessage.text = if (flag == 2) getString(R.string.success1) else getString(R.string.success2)
                         binding.buttonAction.setOnClickListener {
                             startNewGame()
                         }
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                 while (i <= 3) {
                     if (buttonStr[i] == buttonStr[i + 3] && buttonStr[i] == buttonStr[i + 6] && buttonStr[i] != "") {
                         binding.successAlertDialog.visibility = View.VISIBLE
-                        binding.textMessage.text = if (flag == 1) getString(R.string.success1) else getString(R.string.success2)
+                        binding.textMessage.text = if (flag == 2) getString(R.string.success1) else getString(R.string.success2)
                         binding.buttonAction.setOnClickListener {
                             startNewGame()
                         }
@@ -83,7 +83,7 @@ class MainActivity : AppCompatActivity() {
                     (buttonStr[3] == buttonStr[5] && buttonStr[3] == buttonStr[7] && buttonStr[3] != "")
                 ) {
                     binding.successAlertDialog.visibility = View.VISIBLE
-                    binding.textMessage.text = if (flag == 1) getString(R.string.success1) else getString(R.string.success2)
+                    binding.textMessage.text = if (flag == 2) getString(R.string.success1) else getString(R.string.success2)
                     binding.buttonAction.setOnClickListener {
                         startNewGame()
                     }
